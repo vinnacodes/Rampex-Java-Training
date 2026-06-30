@@ -14,50 +14,51 @@ public class ParallelArrays {
         int [] prices =  {40,20,45,40,10};
 
 
+        int [] stock ={5,5,5,5,5};
+        int totalbill = 0;
+
+
+
+
         // gettitng the user input
         System.out.println( "pepsi, sprite,maza,mountain dew,campa");
-
-        System.out.print("Enter the name of the drink : ");
-         String name = sc.nextLine();
-
-         System.out.println("ENter the Quantity : ");
-       int qty =sc.nextInt();
-
-        for (int i = 0; i < drinks.length; i++) {
-
-            if (name.equals(drinks[i])){
+        while(true) {
+            System.out.print("Enter the name of the drink : ");
+            String name = sc.nextLine();
+            if (name.equals("exit")) {
+                System.out.println("thank you");
+                break;
+            }
 
 
-           System.out.print(    prices[i] *qty);
+            System.out.println("ENter the Quantity : ");
+            int qty = sc.nextInt();
+            sc.nextLine();
+            //getting the quantity from user
+
+            // finding the position of the drink in the array
+
+            for (int i = 0; i < drinks.length; i++) {
+
+                if (name.equals(drinks[i])) {
+
+                    // i is the index or position of the drink in that Array
+
+                    if (qty <= stock[i]) {
+                        totalbill = totalbill + (prices[i] * qty);
+
+                        stock[i] = stock[i] - qty;// printing the bill;
+
+                    } else {
+
+                        System.out.println("Insufficient stock !!! ");
+                    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-       }
-
-         }
-
-
-
-         // printing the bill:
-
-        //System.out.println(" The total amt is " qty* price)
-
-
-
-       // System.out.print(1*prices[0]);
-
+                }
+            }
+        }
+        System.out.print(" The total amt is " + totalbill);
 
 
     }
