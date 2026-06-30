@@ -29,6 +29,21 @@ public class ParallelArrays {
 
 
            System.out.print(    prices[i] *qty);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        }
 
          }
