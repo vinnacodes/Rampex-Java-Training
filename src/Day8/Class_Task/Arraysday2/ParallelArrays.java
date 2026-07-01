@@ -7,6 +7,8 @@ public class ParallelArrays {
 
 
     public static void main(String [] a){
+
+
      Scanner sc = new Scanner(System.in);
 
         String [] drinks ={"pepsi", "sprite","maza","mountain dew","campa"};
@@ -17,9 +19,6 @@ public class ParallelArrays {
         int [] stock ={5,5,5,5,5};
         int totalbill = 0;
 
-
-
-
         // gettitng the user input
         System.out.println( "pepsi, sprite,maza,mountain dew,campa");
         while(true) {
@@ -29,8 +28,6 @@ public class ParallelArrays {
                 System.out.println("thank you");
                 break;
             }
-
-
             System.out.println("ENter the Quantity : ");
             int qty = sc.nextInt();
             sc.nextLine();
@@ -53,13 +50,9 @@ public class ParallelArrays {
 
                         System.out.println("Insufficient stock !!! ");
                     }
-
-
                 }
             }
         }
         System.out.print(" The total amt is " + totalbill);
-
-
     }
 }
