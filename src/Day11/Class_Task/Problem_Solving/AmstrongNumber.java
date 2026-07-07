@@ -2,7 +2,7 @@ package Day11.Class_Task.Problem_Solving;
 
 public class AmstrongNumber {
 
-
+   public static  int ams = 153;
 
 
     public static void main(String [] args){
